@@ -40,6 +40,11 @@ client.on('message', message => {
 	}
 });
 client.on('message', msg => {
+  if (msg.content === '.ip') {
+    msg.reply('**JoinMegaMc.tk**');
+  }
+});
+client.on('message', msg => {
   if (msg.content === '.help') {
     msg.reply(':envelope: | تم ارسال الرساله في الخاص');
   }
