@@ -31,38 +31,20 @@ if (message.content === '.help') {
   message.author.sendEmbed(embed);
     }
 });
-client.on('message', message => {
-    var prefix = "."
-    let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
+client.on("message", msg => {
+let ownerid = '361855205664489475'
+if(msg.content === `<@${ownerid}>`){
+bot.users.get(ownerid).send(`
+في واحد منشنك
+
+بسيرفر: :arrow_down:
+\`${msg.guild.name}\`
  
-  let args = message.content.split(" ").slice(1);
- 
- 
-if(command == "draw") {
-    var Canvas = require('canvas')
-  , Image = new Canvas.Image
-  , canvas = new Canvas(450, 170)
-  , ctx = canvas.getContext('2d');
-  ctx.font = '30px Impact';
-  let args = message.content.split(" ").slice(1);
- 
-Image.src = canvas.toBuffer();
- 
-    console.log(Image);
-ctx.drawImage(Image, 0, 0, Image.width / 470, Image.height / 170);
-ctx.fillText(args.join("  "),110, 70);
- 
- 
-ctx.beginPath();
-ctx.lineTo(50, 102);
-ctx.stroke();
- 
-message.channel.sendFile(canvas.toBuffer());
+By: :arrow_down:
+***${msg.author}***`);
 }
-}).on('ready', () => {
- 
-});
+})
+
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('discord.gg')){
