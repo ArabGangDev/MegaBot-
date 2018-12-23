@@ -154,29 +154,6 @@ client.on('guildMemberAdd', member => {
 	var role = member.guild.roles.find('name', '-Member');
 	member.addRole(role)
 });
-var prefix = ".";
-client.on('message', message => {
-    if(message.content == prefix + 'about') {
-		var servername = message.guild.name
-        var اونر = message.guild.owner
-        var اعضاء = message.guild.memberCount
-        var بلدالسيرفر = message.guild.region
-        var الرومات = message.guild.channels.size
-        var الرتب = message.guild.roles
-        var عمل = message.guild.createdAt
-        var الروم = message.guild.defaultChannel
-        var server = new Discord.RichEmbed()
-        .setThumbnail(message.guild.iconURL)
-        .addField('اسم السيرفر', servername)
-        .addField('أعضاء السيرفر', اعضاء)
-        .addField('رومات السيرفر', الرومات)
-        .addField('صاحب السيرفر', اونر)
-        .addField('تاريخ افتتاح السيرفر', عمل)
-        .setColor('RANDOM')
-
-        message.channel.sendEmbed(server)
-    }
-});
 client.on("message", (message) => {
     if (message.content.startsWith(".ban ")) {
       if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('⚠ ماعندك الصلاحيات');
