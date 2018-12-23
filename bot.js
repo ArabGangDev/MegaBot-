@@ -37,8 +37,6 @@ client.on('message', msg => {
             let bb = bans.map(a => `${a}`).join(" - ");
             message.channel.send(`**\`${b}\` | ${bb}**`);
         });
-    }
-});
 if (message.content === '.help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**.help**" ,"يعلمك اوامر البوت")
