@@ -18,25 +18,6 @@ client.on('message', msg => {
     msg.reply('4567890');
   }
 });
-	client.on('message',function(message) {
-  if(!message.channel.guild) return undefined;
-  const swearWords = ["كلب","حيوان","زق","العن امك","العن ابوك"];
-  if (swearWords.some(word => message.content.includes(word)) ) {
-    message.delete()
-    message.reply("ممنوع السب"); 
-  }
-});
-	var prefix = ".";
-	client.on("message", async message => {
-    if(message.content.startsWith(prefix + "banslist")) {
-        if(!message.guild) return;
-                if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send('**Sorry But You Dont Have Permission** `BAN_MEMBERS`' );
-        message.guild.fetchBans()
-        .then(bans => {
-            let b = bans.size;
-            let bb = bans.map(a => `${a}`).join(" - ");
-            message.channel.send(`**\`${b}\` | ${bb}**`);
-        });
 if (message.content === '.help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**.help**" ,"يعلمك اوامر البوت")
