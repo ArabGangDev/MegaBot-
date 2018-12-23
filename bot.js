@@ -26,11 +26,10 @@ client.on('message', msg => {
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
             .addField('**Bot Ping**🚀 :' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
-            .addField('**Servers**📚 :', [client.guilds.size], true)
             .addField('**Channels**📝 :' , `[ ${client.channels.size} ]` , true)
             .addField('**Users**🔮 :' ,`[ ${client.users.size} ]` , true)
             .addField('**Bot Name**🔰 :' , `[ ${client.user.tag} ]` , true)
-            .addField('**Bot Owner**👑 :' , `[<@ايدي حقك>]` , true)
+            .addField('**Bot Owner**👑 :' , `[<@!7assawi.SA#9999>]` , true)
             .setFooter(message.author.username, message.author.avatarURL)
     })
 }
