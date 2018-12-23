@@ -115,6 +115,8 @@ client.on('message', message => {
         if (!message.member.hasPermissions(['ADMINISTRATOR'])){
         message.delete()
     return message.reply(`** No Invite Links :angry: !**`)
+		message.delete()
+		return message.reply(`** No Invite Links :angry: !**`)
     }
 }
 });
