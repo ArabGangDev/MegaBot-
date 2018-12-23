@@ -31,20 +31,6 @@ if (message.content === '.help') {
   message.author.sendEmbed(embed);
     }
 });
-client.on("message", msg => {
-let ownerid = '361855205664489475'
-if(msg.content === `<@${ownerid}>`){
-bot.users.get(ownerid).send(`
-في واحد منشنك
-
-بسيرفر: :arrow_down:
-\`${msg.guild.name}\`
- 
-By: :arrow_down:
-***${msg.author}***`);
-}
-})
-
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('discord.gg')){
