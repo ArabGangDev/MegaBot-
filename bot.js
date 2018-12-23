@@ -18,6 +18,19 @@ client.on('message', msg => {
     msg.reply('4567890');
   }
 });
+	var prefix = ".";
+	client.on("message", async message => {
+    if(message.content.startsWith(prefix + "banslist")) {
+        if(!message.guild) return;
+                if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send('**Sorry But You Dont Have Permission** `BAN_MEMBERS`' );
+        message.guild.fetchBans()
+        .then(bans => {
+            let b = bans.size;
+            let bb = bans.map(a => `${a}`).join(" - ");
+            message.channel.send(`**\`${b}\` | ${bb}**`);
+        });
+    }
+});
 if (message.content === '.help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**.help**" ,"يعلمك اوامر البوت")
