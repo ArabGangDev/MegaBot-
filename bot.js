@@ -18,22 +18,6 @@ client.on('message', msg => {
     msg.reply('4567890');
   }
 });
-	client.on('message', message => {
-    if (message.content === ('.bot')) {
-    message.channel.send({
-        embed: new Discord.RichEmbed()
-            .setAuthor(client.user.username,client.user.avatarURL)
-            .setThumbnail(client.user.avatarURL)
-            .setColor('RANDOM')
-            .addField('**Bot Ping**🚀 :' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
-            .addField('**Channels**📝 :' , `[ ${client.channels.size} ]` , true)
-            .addField('**Users**🔮 :' ,`[ ${client.users.size} ]` , true)
-            .addField('**Bot Name**🔰 :' , `[ ${client.user.tag} ]` , true)
-            .addField('**Bot Owner**👑 :' , `[<@!7assawi.SA#9999>]` , true)
-            .setFooter(message.author.username, message.author.avatarURL)
-    })
-}
-});
 if (message.content === '.help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**.help**" ,"يعلمك اوامر البوت")
@@ -41,7 +25,6 @@ if (message.content === '.help') {
 				.addField("**.id**" ,"يرسل رسالة فيها معلوماتك")
 				.addField("**.about**" ,"يرسل معلومات السيرفر")
 				.addField("**.avatar**" ,"يرسل رابط فيه صورت بروفايلك")
-	      .addField("**.bot**" ,"يرسل معلومات البوت")
 	      .addField("**.ip**" ,"MegaMc يعطيك اي بي سيرفر الماينكرافت")
                 .setColor('RANDOM')
 .setColor('RANDOM')
