@@ -18,6 +18,14 @@ client.on('message', msg => {
     msg.reply('4567890');
   }
 });
+	client.on('message',function(message) {
+  if(!message.channel.guild) return undefined;
+  const swearWords = ["كلب","حيوان","زق","العن امك","العن ابوك"];
+  if (swearWords.some(word => message.content.includes(word)) ) {
+    message.delete()
+    message.reply("ممنوع السب"); 
+  }
+});
 	var prefix = ".";
 	client.on("message", async message => {
     if(message.content.startsWith(prefix + "banslist")) {
