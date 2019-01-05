@@ -174,7 +174,7 @@ client.on('guildMemberAdd', member => {
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField(':bust_in_silhouette: | name : ', `${member}`)
-        .addField(':microphone2: | Welcome!', `Welcome to MegaMc!, ${member}`)
+        .addField(':microphone2: | Welcome!', `Welcome to MegaDiscord!, ${member}`)
         .addField(':id: | User :', "**[" + `${member.id}` + "]**")
         .addField(':family_mwgb: | Your are the member', `${member.guild.memberCount}`)
         .setTimestamp()
