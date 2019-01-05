@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame('By:7assawi.SA v0.3.9','https://www.twitch.tv/TEST-Broadcast');
+  client.user.setGame('.help','https://www.twitch.tv/TEST-Broadcast');
   console.log('---------------');
   console.log(' Bot Is Online')
   console.log('---------------')
@@ -25,7 +25,6 @@ if (message.content === '.help') {
 				.addField("**.id**" ,"يرسل رسالة فيها معلوماتك")
 				.addField("**.about**" ,"يرسل معلومات السيرفر")
 				.addField("**.avatar**" ,"يرسل رابط فيه صورت بروفايلك")
-	      .addField("**.ip**" ,"MegaMc يعطيك اي بي سيرفر الماينكرافت")
                 .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -59,11 +58,6 @@ client.on('message', function(msg) {
       msg.channel.send({embed:embed});
     }
   });
-client.on('message', msg => {
-  if (msg.content === '.ip') {
-    msg.reply('**JoinMegaMc.tk**');
-  }
-});
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('gmail')){
